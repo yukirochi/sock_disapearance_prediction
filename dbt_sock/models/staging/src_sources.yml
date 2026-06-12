@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sock_data
+    schema: raw
+
+    tables:
+      - name: sock_raw

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sock_data_marts
+    schema: staging
+
+    tables:
+      - name: stg_data
