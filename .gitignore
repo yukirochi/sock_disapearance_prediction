@@ -3,3 +3,6 @@ dbt_sock/.env
 dbt_sock/profiles.yml
 logs
 sock_data.py
+.env
+model.py
+__pycache__
