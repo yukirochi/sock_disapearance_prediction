@@ -18,13 +18,9 @@ WITH staging AS (
             WHEN LOWER(LOAD_SIZE) = 'large' THEN 3
             ELSE 1
         END AS LOAD_SIZE,
-        CASE 
-            WHEN LOWER(PHASE_OF_MOON) = 'new' THEN 1
-            WHEN LOWER(PHASE_OF_MOON) = 'half' THEN 2
-            WHEN LOWER(PHASE_OF_MOON) = 'full' THEN 3
-            WHEN LOWER(PHASE_OF_MOON) = 'crescent' THEN 4
-            ELSE null
-        END AS PHASE_OF_MOON,
+        CASE WHEN LOWER(PHASE_OF_MOON) = 'new' THEN 1 ELSE 0 END AS new_moon_sock,
+        CASE WHEN LOWER(PHASE_OF_MOON) = 'half' THEN 1 ELSE 0 END AS half_moon_sock,
+        CASE WHEN LOWER(PHASE_OF_MOON) = 'full' THEN 1 ELSE 0 END AS full_moon_sock,
         DESPERATION_INDEX,
         TARGET_VANISHED
     FROM staging

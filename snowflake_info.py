@@ -21,3 +21,5 @@ sql = 'SELECT * FROM mart.MART_DATA'
 
 df = curr.execute(sql).fetch_pandas_all()
 
+print(df.columns.to_list())
+
